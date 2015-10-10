@@ -38,12 +38,34 @@ final class oFactory {
      */
     private function __construct() { }
     
+    protected function &get_make_o($what,$id){
+        $chName = "{$what}s";
+        $OBJ = 'o'.ucfirst($what);
+        if(isset($this->cache[$chName][$id]) && is_object($this->cache[$chName][$id])){
+            return $this->cache[$chName][$id];
+        }
+        $this->cache[$chName][$id] = new $OBJ($id);
+        return $this->cache[$chName][$id];
+    }
+    
     public function &get_oItem($id){
+        /*
         if(isset($this->cache['items'][$id]) && is_object($this->cache['items'][$id])){
             return $this->cache['items'][$id];
         }
         $this->cache['items'][$id] = new oItem($id);
         return $this->cache['items'][$id];
+         * 
+         */
+        return $this->get_make_o('item', $id);
+    }
+    
+    public function &get_oBlog($id){
+        return $this->get_make_o('blog', $id);
+    }
+    
+    public function &get_oCat($id){
+        return $this->get_make_o('cat', $id);
     }
     
 }
