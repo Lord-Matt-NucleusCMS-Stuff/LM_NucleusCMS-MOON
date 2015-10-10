@@ -11,3 +11,6 @@ comments. While it would not be very practical to do so it would be possible to
 address a comment from a blog like this:
 
 echo $oBlogObj->item(133)->comment(988)->link; // Output: http://example.com 
+
+This is not perfect for example oCat and oBlog should probably share a common
+parent class rather than cat being a child of blog. This might change.
