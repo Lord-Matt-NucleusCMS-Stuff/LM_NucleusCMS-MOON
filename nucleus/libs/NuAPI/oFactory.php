@@ -47,7 +47,11 @@ final class oFactory {
         $this->cache[$chName][$id] = new $OBJ($id);
         return $this->cache[$chName][$id];
     }
-    
+    /**
+     *
+     * @param int $id
+     * @return oItem 
+     */
     public function &get_oItem($id){
         /*
         if(isset($this->cache['items'][$id]) && is_object($this->cache['items'][$id])){
@@ -60,10 +64,19 @@ final class oFactory {
         return $this->get_make_o('item', $id);
     }
     
+    /**
+     *
+     * @param int $id
+     * @return oBlog 
+     */
     public function &get_oBlog($id){
         return $this->get_make_o('blog', $id);
     }
-    
+    /**
+     *
+     * @param int $id
+     * @return oCat 
+     */
     public function &get_oCat($id){
         return $this->get_make_o('cat', $id);
     }
