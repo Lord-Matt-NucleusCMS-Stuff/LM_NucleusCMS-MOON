@@ -1,0 +1,13 @@
+MOON
+
+The purpose of MOON is to create a concrete MODEL of the data being manipulated 
+that can then have views to display it, such as with the skin / template system 
+and controllers to manipulate it as per some user API such as the action system.
+
+MOON does this by providing a hiarachical object interface collection where 
+objects directly express the implied relationship between CMS parts. For example
+a blog acts as a factory to provide the items it collects and items their 
+comments. While it would not be very practical to do so it would be possible to 
+address a comment from a blog like this:
+
+echo $oBlogObj->item(133)->comment(988)->link; // Output: http://example.com 
