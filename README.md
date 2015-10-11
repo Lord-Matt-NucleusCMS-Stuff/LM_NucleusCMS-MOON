@@ -1,5 +1,5 @@
-About LMNucleus CMS
--------------------
+About LM_NucleusCMS::MOON
+-------------------------
 
 [LM_NucleusCMS] (http://nucleus.slightlysome.net/) is a fork of [NucleusCMS] (http://www.nucleuscms.org/).
 The reason for this fork is that currently is the Nucleus CMS project abandoned by its developers 
